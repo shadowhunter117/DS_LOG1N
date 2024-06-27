@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN DRAGON SCUAD</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    #judul {
+      width: 0;
+      height: 0;
+      white-space: nowrap;
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 auto;
+      top: 30px;
+      left: 60px;
+      animation:jud 1s linear forwards;
+    }
+    
+    @keyframes jud{
+        0%{
+            top:-30px;
+        }
+        100%{
+            top:30px;
+        }
+    }
+
+    #nama, #umur, #askot {
+      position: absolute;
+      left: 60px;
+      background-color: black;
+      width: 240px;
+      height: 30px;
+    }
+
+    #nama {
+      top: 160px;
+      opacity:0;
+      animation:nam 1s linear forwards;
+      animation-delay: 1s;
+    }
+    
+    @keyframes nam{
+        0%{
+            left:-60px;
+            opacity:0;
+        }
+        100%{
+            left:60px;
+            opacity:2;
+        }
+    }
+
+    #umur {
+      top: 200px;
+      opacity:0;
+      animation:um 1s linear forwards;
+      animation-delay: 2s;
+    }
+    
+    @keyframes um{
+        0%{
+            left:120px;
+            opacity:0;
+        }
+        100%{
+            left:60px;
+            opacity:2;
+        }
+    }
+
+    #askot {
+      top: 240px;
+      opacity: 0;
+      animation:ask 1s linear forwards;
+      animation-delay: 3s;
+    }
+    
+    @keyframes ask{
+        0%{
+            left:-60px;
+            opacity:0;
+        }
+        100%{
+            left:60px;
+            opacity:2;
+        }
+    }
+
+    #log {
+      top: 340px;
+      position: absolute;
+      width: 120px;
+      height: 50px;
+      margin: 0 auto;
+      background-color: black;
+      font-weight: bold;
+      font-size: 20px;
+      white-space: nowrap;
+      border: 2px solid silver;
+      cursor: pointer;
+      opacity: 0;
+      animation:lg 1s linear forwards;
+      animation-delay: 4s;
+    }
+    
+    @keyframes lg{
+        0%{
+            top:360px;
+            opacity:0;
+        }
+        100%{
+            top:340px;
+            opacity:2;
+        }
+    }
+    
+    #wtrmrk{
+        width:0;
+        height:0;
+        font-size:5px;
+        font-weight:bold;
+        position:absolute;
+        top:540px;
+        left:10px;
+        opacity:0;
+        white-space:nowrap;
+      animation:wr 1s linear forwards;
+      animation-delay: 5s;
+    }
+    
+    @keyframes wr{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:2;
+        }
+    }
+    
+    #rultom{
+        width:70px;
+        height:20px;
+        position:absolute;
+        top:540px;
+        opacity:0;
+        margin:0 auto;
+        font-weight:bold;
+        background-color: black;
+        border:1px solid silver;
+        white-space:nowrap;
+        animation:rltm 1s linear forwards;
+        animation-delay: 6s;
+    }
+    
+    @keyframes rltm{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:2;
+        }
+    }
+    
+    #rules{
+        display: none;
+        font-weight:bold;
+        top:100px;
+        white-space: nowrap;
+        position: absolute;
+    }
+    
+    #rules::before{
+        content: "";
+        width:320px;
+        height:390px;
+        position: absolute;
+        border:1px solid silver;
+        left:-20px;
+        top:-20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="judul" style="color: silver">WELCOME TO DS LOGIN</div>
+  <input id="nama" type="text" placeholder="Masukkan nama" style="color: silver">
+  <input id="umur" type="text" placeholder="Masukkan umur" style="color: silver">
+  <input id="askot" type="text" placeholder="Asal kota" style="color: silver">
+  <button id="log" type="submit" style="color: silver">Log In</button>
+  <div id="wtrmrk" style="color:silver">script by shadow</div>
+  <div id="rules" style="color:silver">🐉 CARD INTRO DRAGON SQUAD 🐉<p>
+
+NAME :
+</p>
+<p>
+AGE :
+</p>
+<p>
+ADDRES :
+</p><p>
+GENDER :
+</p>
+<p>
+• syarat masuk:
+</p>
+<p>
+-wajib baca deskripsi group
+</p><p>
+-toxic sewajarnya
+</p><p>
+-no double team
+</p><p>
+    salin,login,isi,kirim
+</p>
+</div>
+
+<button id="rultom" type="submit" style="color:silver">intro card</button>
+
+  <script>
+    const logButton = document.getElementById('log');
+    const namaInput = document.getElementById('nama');
+    const umurInput = document.getElementById('umur');
+    const askotInput = document.getElementById('askot');
+
+    logButton.addEventListener('click', function() {
+      const namaValue = namaInput.value.trim();
+      const umurValue = umurInput.value.trim();
+      const askotValue = askotInput.value.trim();
+
+      if (namaValue === '' || umurValue === '' || askotValue === '') {
+        alert('Mohon isi semua data!');
+        return; // Hentikan proses jika ada data yang kosong
+      }
+
+      // Jika semua data terisi, redirect ke tautan WhatsApp
+      window.location.href = 'https://chat.whatsapp.com/H29Z0MbRMW1AQFDumYV6k3';
+    });
+    
+    var rules = document.getElementById("rules");
+    var rultom = document.getElementById("rultom");
+    var clickCount =0;
+    
+    rultom.addEventListener("click",function(){
+        
+        clickCount++;
+        
+        if (clickCount === 1) {
+            
+            rules.style.display ="block";
+            judul.style.display ="none";
+            nama.style.display ="none";
+            umur.style.display ="none";
+            askot.style.display ="none";
+            wtrmrk.style.display ="none";
+            log.style.display ="none";
+            rultom.textContent ="close";
+            
+        } else if (clickCount === 2) {
+            
+            clickCount =0;
+            rules.style.display ="none";
+            judul.style.display ="block";
+            nama.style.display ="block";
+            umur.style.display ="block";
+            askot.style.display ="block";
+            wtrmrk.style.display ="block";
+            log.style.display = "block"
+            rultom.textContent ="intro card";
+            
+        }
+    })
+    
+  </script>
+</body>
+</html>
